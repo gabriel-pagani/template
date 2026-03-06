@@ -44,6 +44,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'app.middleware.StaffOnlyAPIMiddleware',
 ]
 
 ROOT_URLCONF = 'project.urls'
@@ -97,13 +98,6 @@ AUTHENTICATION_BACKENDS = [
     'app.backends.EmailModelBackend',
     'django.contrib.auth.backends.ModelBackend',
 ]
-
-REST_FRAMEWORK = {
-    'DEFAULT_RENDERER_CLASSES': (
-        'rest_framework.renderers.JSONRenderer',        
-        'app.renderers.StaffBrowsableAPIRenderer',
-    )
-}
 
 LANGUAGE_CODE = 'en-us'
 
