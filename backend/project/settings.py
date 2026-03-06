@@ -93,6 +93,18 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+AUTHENTICATION_BACKENDS = [
+    'app.backends.EmailModelBackend',
+    'django.contrib.auth.backends.ModelBackend',
+]
+
+# REST_FRAMEWORK = {
+#     'DEFAULT_RENDERER_CLASSES': (
+#         'rest_framework.renderers.JSONRenderer',        
+#         'app.renderers.StaffBrowsableAPIRenderer',
+#     )
+# }
+
 LANGUAGE_CODE = 'en-us'
 
 TIME_ZONE = 'America/Sao_Paulo'
@@ -108,3 +120,5 @@ STATICFILES_DIRS = [
 STATIC_URL = 'static/'
 
 STATIC_ROOT = BASE_DIR / 'static'
+
+AUTH_USER_MODEL = 'app.Users'
