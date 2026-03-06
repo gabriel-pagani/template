@@ -9,12 +9,19 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG', '0') == '1'
-
 ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
+
+DEBUG = os.getenv('DEBUG', '0') == '1'
 
 if DEBUG:
     CORS_ORIGIN_ALLOW_ALL = True
+
+if not DEBUG:
+    SESSION_COOKIE_AGE = 60 * 60
+
+    SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+    SESSION_SAVE_EVERY_REQUEST = True
 
 INSTALLED_APPS = [
     'django.contrib.admin',
