@@ -22,7 +22,7 @@ services:
   app:
     build:
       context: ../
-      dockerfile: _deploy/Dockerfile
+      dockerfile: deploy/Dockerfile
     image: template
     container_name: app
     expose:
