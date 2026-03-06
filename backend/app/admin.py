@@ -19,15 +19,7 @@ class UsersAdmin(UserAdmin):
     ordering = ('username',)
     fieldsets = (
         (None, {
-            'fields': ('username', 'email', 'password',)
-        }),
-        ('Personal Information', {
-            'fields': ('first_name', 'last_name', 'cpf', 'phone', 'date_birth',),
-            'classes': ('collapse',)
-        }),
-        ('Address', {
-            'fields': ('zip_code', 'state', 'city', 'neighborhood', 'street', 'number', 'complement',),
-            'classes': ('collapse',)
+            'fields': ('username', 'first_name', 'last_name', 'email', 'password',)
         }),
         ('Permissions', {
             'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions',), 
@@ -38,8 +30,7 @@ class UsersAdmin(UserAdmin):
             'classes': ('collapse',)
         }),
         ('Observations', {
-            'fields': ('observations',), 
-            'classes': ('collapse',)
+            'fields': ('observations',)
         }),
     )
     add_fieldsets = (
