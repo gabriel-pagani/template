@@ -11,7 +11,7 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 
 DEBUG = os.getenv('DEBUG', '0') == '1'
 
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '*').split(',')
+ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS').split(',')
 
 CORS_ORIGIN_ALLOW_ALL = True
 
@@ -24,6 +24,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'rest_framework',
     'corsheaders',
+    'app',
 ]
 
 MIDDLEWARE = [
@@ -99,9 +100,3 @@ STATICFILES_DIRS = [
 STATIC_URL = 'static/'
 
 STATIC_ROOT = BASE_DIR / 'static'
-
-SESSION_COOKIE_AGE = 60 * 60
-
-SESSION_EXPIRE_AT_BROWSER_CLOSE = True
-
-SESSION_SAVE_EVERY_REQUEST = True
