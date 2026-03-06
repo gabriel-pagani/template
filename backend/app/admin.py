@@ -9,7 +9,7 @@ from .models import Users
 # Users Admin
 @admin.register(Users)
 class UsersAdmin(UserAdmin):
-    list_display = ('username', 'email', 'first_name', 'last_name', 'last_login', 'date_joined', 'is_staff', 'is_superuser', 'is_active',)
+    list_display = ('username', 'first_name', 'last_name', 'email', 'last_login', 'date_joined', 'is_staff', 'is_superuser', 'is_active',)
     search_fields = ('username', 'email', 'first_name', 'last_name', 'observations',)
     list_filter = ('is_active', 'is_staff', 'is_superuser', 'groups',)
     filter_horizontal = ('groups', 'user_permissions',)
