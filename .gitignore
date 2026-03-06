@@ -205,3 +205,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Wheels
+*.whl
+
+# Sensitive data
+database/
+certbot/
