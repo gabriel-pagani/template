@@ -22,12 +22,10 @@ class UsersAdmin(UserAdmin):
             'fields': ('username', 'first_name', 'last_name', 'email', 'password',)
         }),
         ('Permissions', {
-            'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions',), 
-            'classes': ('collapse',)
+            'fields': ('is_active', 'is_staff', 'is_superuser', 'groups', 'user_permissions',)
         }),
         ('Dates', {
-            'fields': ('last_login', 'date_joined',), 
-            'classes': ('collapse',)
+            'fields': ('last_login', 'date_joined',)
         }),
         ('Observations', {
             'fields': ('observations',)
