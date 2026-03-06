@@ -23,4 +23,4 @@ clean-system:
 	@cd deploy/ && \
 	docker compose down -v && \
 	docker system prune -a --volumes --force && \
-    cd .. && rm -rf backend/build/ database/ frontend/node_modules/
+    cd .. && sudo rm -rf backend/build/ database/ frontend/node_modules/ deploy/certbot/
