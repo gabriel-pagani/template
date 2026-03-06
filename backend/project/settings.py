@@ -98,12 +98,12 @@ AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
 ]
 
-# REST_FRAMEWORK = {
-#     'DEFAULT_RENDERER_CLASSES': (
-#         'rest_framework.renderers.JSONRenderer',        
-#         'app.renderers.StaffBrowsableAPIRenderer',
-#     )
-# }
+REST_FRAMEWORK = {
+    'DEFAULT_RENDERER_CLASSES': (
+        'rest_framework.renderers.JSONRenderer',        
+        'app.renderers.StaffBrowsableAPIRenderer',
+    )
+}
 
 LANGUAGE_CODE = 'en-us'
 
